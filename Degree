@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+float quest(){
+    printf(" enter num:\n");
+int num;
+cin >> num;
+    printf(" enter degree\n");
+int deg;
+cin >> deg;
+float a=num;
+int i=1;
+int res;
+if (deg==0){
+a=1;}
+else{
+    while (i<deg){
+        res=(a*num);
+        a=res;
+        i++;}}
+return a;}
+
+int main(){
+    printf("%f",quest());
+    return 0;}
