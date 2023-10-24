@@ -1,0 +1,90 @@
+#include <iostream>
+#include <stdlib.h>
+#include <random>
+int main(){
+srand(time(0));
+printf("Добро пожалоаать в 'угадайку'\n"
+"есть 2 режима с одной и двумя переменными\n"
+"подсказки работают только на 1 переменную\n");
+printf(" ввести вторую переменную?\n"
+"(введите для подтверждения 1)\n"); 
+int way=1;
+int choose;
+std::cin >> choose;
+if (choose!=way){
+ printf("введите верхнюю границу:\n");
+int z;
+std::cin >> z;
+int x=rand()%z +1;
+int q;
+ printf("%d\n",x);//удалить строчку показа числа
+int m;
+ printf ("сколько промахов?\n");
+std::cin >> m;//спросить про возможность использования cin вместо scanf
+int stop;
+ printf("введите стоп-число \n(исключая 0):\n");
+std:: cin >> stop;
+if (stop!=x){
+ printf(" давайте начнем-с\n");
+for (q=0;q<m;q++){
+float enter;
+std::cin >> enter;
+if (enter!=stop){
+ if (enter<x){
+  printf("как то маловато\n");}
+ else if (enter>x){
+  printf("хорош,перебор\n");}
+ else if (enter=x){
+  printf("неплохо\n");
+ break;}}
+ else if (enter=stop){
+  printf("я в тебя верил ,как атеист в бога,\nтак держать!\n");
+break;}}} 
+else if (stop=x){
+printf("Выйграл даже не заходя,мегахорош");}}
+else if (choose = way){// доработать
+printf("введите верхнюю границу первого число:\n");
+int up;
+int z;
+std::cin >> z;
+int x=rand()%z +1;
+printf("введите верхнюю границу второго числа:\n");
+std::cin >> up;
+int y=rand()%up +1;
+if(x!=y){
+int q;
+printf("%d\n",z);
+printf("%d\n",y);
+int m;
+ printf ("сколько промахов?\n");
+std::cin >> m;//спросить про возможность использования cin вместо scanf
+int stop;
+ printf("введите стоп-число \n(исключая 0):\n");
+std:: cin >> stop;
+if (stop!=x){
+ printf(" давайте начнем-с\n");
+for (q=0;q<m;q++){
+float enter;
+std::cin >> enter;
+if (enter!=stop){
+ if (enter<x){
+  printf("как то маловато\n");}
+ else if (enter>x){
+  printf("хорош,перебор\n");}
+ else if (enter=x){
+  printf("неплохо\n");
+ break;}}
+  else if (enter=y){
+  printf("неожидано,но попал в яблочко");
+  break;}
+ else if (enter=stop){
+  printf("я в тебя верил ,как атеист в бога,\nтак держать!\n");
+break;}}}
+else if (stop=x){
+ printf("Выйграл даже не заходя,мегахорош");}
+else if(stop=y){
+ printf("Выйграл даже не заходя,мегахорош");}}
+  else if(x=y){
+ printf("твоя удача схлопнула вселенную");
+ return 0;}}
+return 0;}
